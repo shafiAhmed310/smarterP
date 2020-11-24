@@ -13,3 +13,70 @@ body{
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+form{
+  padding: 20px;
+  position: relative;
+  
+}
+form input{
+  outline: none;
+}
+
+form .custom{
+  position: absolute;
+    top: 21px;
+    right: 587px;
+    background: red;
+    padding: 3px 10px;
+   outline: none;
+
+}
+form .custom .customSpan{
+  font-size: 20px;
+}
+
+ @media only screen and (max-width:1306px){
+  form .custom{
+    position: absolute;
+    top: 21px;
+    right: 477px;
+  } 
+    
+ } 
+@media only screen and (max-width:1000px){
+  .HooksBlock{
+    width: 100%;
+    margin-left: 250px;
+  }
+  .postBlock{
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 80px;
+  }
+ 
+    
+}
+
+@media only screen and (max-width:800px){
+  .HooksBlock{
+    width: 100%;
+    margin-left: 200px;
+  }
+  .postBlock{
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 80px;
+  }
+}
+@media only screen and (max-width:600px){
+  .HooksBlock{
+    width: 100%;
+    margin-left: 80px;
+  }
+  .postBlock{
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 20px;
+  }
+}

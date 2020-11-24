@@ -1,44 +1,28 @@
-import React , {useState, useEffect, Fragment} from 'react';
+import React , { Fragment} from 'react';
 import './FetchPost.css'
-const FetchPost = ()=>{
-    const [data , setData] = useState([]);
-    
-    useEffect(()=>{
-       fetch("/all-post" ,{
-           headers:{
-               "Content-Type":"application/json"
-           }
-       }).then(res=>res.json())
-       .then(data=>{
-           
-           setData(data.posts);
-       })
-    },[])
-   
-   
+const FetchPost = ({data})=>{
     return(
         <Fragment>
        <div className="parent">
             <h1 id="h1"> List Of Post</h1>
+            <div className="scroll">
             {
                 data.map(item=>{
-                   return (
-                    
-                         
+                   return (   
                     <div className="fetchBlock" key={item._id}>
                         
                        <div className="card">
-                       <h3>Title :{item.title}</h3>
-                      
-                    <div className="card-body">
-                   <div><h3>Description :</h3>{item.body}</div>
+                           <ul>
+                               <li> <span>Title :</span>{item.title}</li>
+                               <li> <span>Description :</span>{item.body}</li>
+                           </ul>
                     </div>
                     </div>
-                    </div>
-                   
-                   )
-                })
+                 )
+                }
+                )
             }
+            </div>
            </div>
         </Fragment>
     )

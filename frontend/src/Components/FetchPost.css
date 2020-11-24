@@ -9,14 +9,32 @@ body{
     max-width: 100%;
     max-height: 100vh;
 }
-
+  
 .card{
     box-shadow: 1px 1px 6px #ccc;
     padding: 0;
     margin: 0;
     line-height: normal;
+    
+    
+}
+.card ul li{
+    list-style: none;
+    line-height: 1.5rem;
+}
+.card ul li span{
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
 }
 .parent{
     max-width: 600px;
     max-height: 100vh;
+   
 }
+.parent .scroll{
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
